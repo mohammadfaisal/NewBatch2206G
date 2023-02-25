@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fugaz+One&family=Great+Vibes&family=Libre+Baskerville&family=Lilita+One&family=Lobster&family=Oleo+Script&family=Paprika&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fugaz+One&family=Great+Vibes&family=Libre+Baskerville&family=Lilita+One&family=Lobster&family=Oleo+Script&family=Paprika&family=Permanent+Marker&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+
+	<script type="text/javascript" src="jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery/jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			
+		  // $("#UserName").click(function() {
+			 //    $("#Showerror").hide();
+			 //  });
+
+
+
+
+			$('button').click(function(){
+				var user = $('#UserName').val();
+
+
+	
+
+				if (user == "") 
+				{
+					$('#Showerror').html('**Must Required');
+					$('#Showerror').css('color' , 'red')
+					return false;
+
+				}
+
+				
+
+				if (!isNaN(user)) 
+				{
+					$('#Showerror').html('**Only Alphabet Allowed');
+					$('#Showerror').css('color' , 'red')
+					return false;
+				}
+
+
+				if (user.length >= 10) 
+				{
+					$('#Showerror').html('**Please Enter Lest 10 Letters');
+					$('#Showerror').css('color' , 'red')
+					return false;
+				}
+
+				
+
+				
+
+				var pass = $('#Password').val();
+
+
+				// $('#Password').click(function(){
+				// 	$('#ShowPasswordError').hide();
+				// })
+
+
+				if (pass == "") 
+				{
+					$('#ShowPasswordError').html('**Must Required Password');
+					$('#ShowPasswordError').css('color' , 'red')
+					return false;
+				}
+
+				if (pass.length <=2) 
+				{
+					$('#ShowPasswordError').html('**Please Enter Propper');
+					$('#ShowPasswordError').css('color' , 'red')
+					return false;
+				}
+
+				if (pass.length >=10) 
+				{
+					$('#ShowPasswordError').html('**Greter Then 10 Please Enter 10 letters&numbers');
+					$('#ShowPasswordError').css('color' , 'red')
+					return false;
+				}
+
+				var rpass = $('#RPassword').val();
+
+				// $('#RPassword').click(function(){
+				// 	$('#RPasswordError').hide();
+				// })
+
+				if (pass != rpass) 
+				{
+					$('#RPasswordError').html('**Not Match Your Password');
+					$('#RPasswordError').css('color' , 'red')
+					return false;
+				}
+
+				var phone = $('#phonenumber').val();
+
+				$('#phonenumber').click(function(){
+					$('#numbererror').hide();
+				})
+
+				if (phone == "") 
+				{
+					$('#numbererror').html('**Must Required pone Number');
+					$('#numbererror').css('color' , 'red');
+					return false;
+				}
+
+				if (isNaN(phone)) 
+				{
+					$('#numbererror').html('**Only Number Allowed');
+					$('#numbererror').css('color' , 'red');
+					return false;
+				}
+
+				if (phone.length != 11) 
+				{
+					$('#numbererror').html('**Please Enter 11 Characters');
+					$('#numbererror').css('color' , 'red');
+					return false;
+				}
+
+				var UEmail = $('#MyEmail').val();
+
+				// $('#MyEmail').click(function(){
+				// 	$('#EmailError').hide();
+				// })
+
+				if (UEmail == "") 
+				{
+					$('#EmailError').html('**Must Required Email');
+					$('#EmailError').css('color' , 'red');
+					return false;
+				}
+
+				if (UEmail.indexOf('@') <1 ) 
+				{
+					$('#EmailError').html('**Email Is Not Propper Kindly Check @');
+					$('#EmailError').css('color' , 'red');
+					return false;
+				}
+
+				if ((UEmail.charAt(UEmail.length - 4) !='.') && (UEmail.charAt(UEmail.length -3) !='.')) 
+				{
+					$('#EmailError').html('**Not Proper Kindly Check .');
+					$('#EmailError').css('color' , 'red');
+					return false;
+				}
+
+
+
+
+
+
+
+			})
+		})
+
+			
+
+				
+		
+
+	</script>
+
+
+</head>
+<body>
+
+<h2>Form Validation With J-Query</h2>
+
+
+<form>
+
+	<h1>SIMPLE FORM</h1>
+	<label>Enter User Name:</label>
+	<input type="text" placeholder="Enter User Name" id="UserName">
+	<div id="Showerror"></div>
+
+	<br>
+
+	<label>Enter Password:</label>
+	<input type="text" placeholder="Enter Password" id="Password">
+	<div id="ShowPasswordError"></div>
+	<br>
+
+	<label>ReEnter Password:</label>
+	<input type="text" placeholder="ReEnter Password" id="RPassword">
+	<div id="RPasswordError"></div>
+	<br>
+
+	<label>Enter Phone Number:</label>
+	<input type="text" placeholder="Enter Phone Number" id="phonenumber">
+	<div id="numbererror"></div>
+	
+	<br>
+	<label>Enter Email:</label>
+	<input type="text" placeholder="Enter Email" id="MyEmail">
+	<div id="EmailError"></div>
+
+
+	<br>
+	<button>Submit Your Form</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+body
+		{
+			background-image: url(1.jpg);
+			background-size: cover;
+			background-position: center;
+
+		}
+		form
+		{
+			width: 50%;
+			height: auto;
+			background-color: grey;
+			padding: 20px;
+			margin: 100px auto;
+			border-radius: 20px;
+			background-color:rgba(255, 99, 71, 0.2);
+			margin-top: 0px;
+		}
+
+		label
+		{
+			line-height: 50px;
+			margin-left: 30px;
+		font-family: 'Dancing Script', cursive;
+font-family: 'Fugaz One', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lilita One', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Oleo Script', cursive;
+font-family: 'Paprika', cursive;
+font-family: 'Tilt Warp', cursive;
+			color: white;
+			font-size: 20px;
+		}
+
+		input
+		{
+			float: right;
+			height: 30px;
+			border-radius: 15px;
+			border: none;
+			padding-left: 2%;
+			width: 90%;
+			margin-right: 5%;
+			font-family: 'Dancing Script', cursive;
+font-family: 'Fugaz One', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lilita One', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Oleo Script', cursive;
+font-family: 'Paprika', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Tilt Warp', cursive;
+font-size: 15px;
+
+		}
+
+		input:focus
+		{
+			outline: none;
+		}
+
+		button
+		{
+			width: 100%;
+			height: 30px;
+			margin-top: 25px;
+			border: none;
+			border-radius: 15px;
+			background-color: #bd9a31;
+
+		}
+
+		button:hover
+		{
+			background-color: #a88313;
+			cursor: pointer;
+		}
+
+		form h1
+		{
+			text-align: center;
+			font-family: 'Dancing Script', cursive;
+font-family: 'Fugaz One', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lilita One', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Oleo Script', cursive;
+font-family: 'Paprika', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Tilt Warp', cursive;
+border-bottom: 2px solid white;
+padding-bottom: 10px;
+		}
+
+		h2
+		{
+			text-align: center;
+			color: #1ab08b;
+			padding-bottom: 5px;
+			border-bottom: 2px solid #85dec8;
+		}
