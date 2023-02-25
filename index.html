@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Vlidation</title>
+
+		<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+
+	<script type="text/javascript" src="jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery/jquery-ui.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+		$("#submit").click(function(){
+
+			var user = $("#Name").val();
+
+			if (user == "") 
+			{
+				$("#showerror").html("**Must Required");
+				$("#showerror").css("color","red");
+				return false;
+
+			}
+
+
+			if ((user.length <= 5) || (user.length >=10 ) )
+			{
+				$("#showerror").html("**Please Ennter 5 To Ten Letter Required");
+				$("#showerror").css("color","red");
+				return false;
+
+				
+			}
+		})
+	})
+
+	$(document).ready(function(){
+
+		var errorremoval = ("#errorremove").val();
+
+		if (errorremoval) 
+		{
+			$("#errorremove").html("");
+			return false;
+		}
+	})
+</script>
+
+
+
+	
+</head>
+<body>
+
+<input type="text" placeholder="Username" id="Name" id="errorremove">
+<div id="showerror"></div>
+<button class="btn btn-primary" id="submit">Submit Form</button>
+
+
+</body>
+</html>
