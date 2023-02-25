@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fugaz+One&family=Great+Vibes&family=Libre+Baskerville&family=Lilita+One&family=Lobster&family=Oleo+Script&family=Paprika&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fugaz+One&family=Great+Vibes&family=Libre+Baskerville&family=Lilita+One&family=Lobster&family=Oleo+Script&family=Paprika&family=Permanent+Marker&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+
+	<script type="text/javascript" src="jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery/jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		
+
+$(document).ready(function(){
+
+
+		  // $("#Name").click(function() {
+			 //    $("#showerror").hide();
+			 //  });
+
+
+	$('button').click(function(){
+
+
+	var user = $('#Name').val();
+
+		if (user == "") 
+	{
+		$('#showerror').html('**Must Required');
+		$('#showerror').css('color' , 'red');
+		return false;
+	}
+
+	if (!isNaN(user)) 
+	{
+		$('#showerror').html("**Only Alphabet Allowed");
+		$('#showerror').css('color' , 'red');
+		return false;
+	}
+
+	if (user.length >=10) 
+	{
+		$('#showerror').html('**10 alphabet allowed');
+		$('#showerror').css('color' , 'red');
+		return false;
+	}
+
+	var passs = $('#Password').val();
+
+	if (passs == "") 
+	{
+		$('#PasswordError').html('**Required');
+		$('#PasswordError').css('color' , 'red');
+		return false;
+
+	}
+
+	if (passs <=2) 
+	{
+		$('#PasswordError').html('**Enter Propper Password Babu Jee');
+		$('#PasswordError').css('color' , 'red');
+		return false;
+	}
+
+	var rpass = $('#Rpassword').val();
+
+	if (rpass == "") 
+	{
+		$('#RpasswordError').html('**Required');
+		$('#RpasswordError').css('color' , 'red');
+		return false;
+	}
+
+	if (passs != rpass) 
+	{
+		$('#RpasswordError').html('**Not Match');
+		$('#RpasswordError').css('color' , 'red');
+		return false;
+	}
+
+	var pooon = $('#Phone').val();
+
+	if (pooon == "") 
+	{
+		$('#PhoneError').html('**Required');
+		$('#PhoneError').css('color' , 'red');
+		return false;
+	}
+
+
+if (isNaN(pooon)) 
+	{
+		$('#PhoneError').html('**Only Number Allowed');
+		$('#PhoneError').css('color' , 'red');
+		return false;
+	}
+
+if (pooon != 11) 
+	{
+		$('#PhoneError').html('**Must Required 11 character You Are Pakistani');
+		$('#PhoneError').css('color' , 'red');
+		return false;
+	}
+
+	
+	
+
+	
+	})
+})
+
+	</script>
+
+
+</head>
+<body>
+
+	<label>Enter Name:</label>
+	<input type="text" placeholder="Enter Name" id="Name">
+	<div id="showerror"></div>
+	<br>
+
+	<label>Enter Password:</label>
+	<input type="text" placeholder="Enter Password" id="Password">
+	<div id="PasswordError"></div>
+	<br>
+
+	<label>Confirm Passowrd:</label>
+	<input type="text" placeholder="Confirm Passowrd" id="Rpassword">
+	<div id="RpasswordError"></div>
+	<br>
+
+	<label>Enter Phone Number:</label>
+	<input type="text" placeholder="Confirm Passowrd" id="Phone">
+	<div id="PhoneError"></div>
+	<button>Submit</button>
+</body>
+</html>
